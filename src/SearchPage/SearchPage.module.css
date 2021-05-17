@@ -1,0 +1,18 @@
+.backgroundImg {
+  background: url('/src/assets/marvel-header.png') center / cover;
+  height: 200px;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.heroesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 -10px;
+}

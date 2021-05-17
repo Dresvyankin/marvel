@@ -1,0 +1,43 @@
+.cardSkeletonWrapper {
+    padding: 20px 10px 0;
+}
+
+.cardSkeleton {
+    position: relative;
+    width: 220px;
+    height: 250px;
+    border-radius: 0.5rem;
+}
+
+.titleSkeleton {
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+    border-radius: 0.5rem;
+    width: 200px;
+    height: 20px;
+}
+
+.pulsate {
+    background: linear-gradient(90deg, #e0e0e0, #cecdcd, #d8d8d8, #e4e3e3);
+    background-size: 400% 400%;
+    animation: Gradient 1s ease infinite;
+}
+
+.pulsateTitle {
+    background: linear-gradient(90deg, #adacac, #cecdcd, #acacac, #bebebe);
+    background-size: 400% 400%;
+    animation: Gradient 1s ease infinite;
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
+}

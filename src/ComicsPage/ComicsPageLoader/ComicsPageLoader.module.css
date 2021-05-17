@@ -1,0 +1,77 @@
+.card {
+  width: 1000px;
+  display: flex;
+  border-radius: 10px;
+  margin: 30px auto 0;
+}
+.cardLeft {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px 0 0 10px;
+}
+
+.cardRight {
+  width: 645px;
+  border-radius: 0 10px 10px 0;
+  padding: 20px 30px 15px;
+}
+
+.cardDetail {
+  display: flex;
+}
+
+.cardDetail div {
+  height: 20px;
+  width: 50px;
+  margin-right: 40px;
+}
+.cardTitle {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.cardText {
+  margin: 10px 0;
+  height: 100px;
+}
+
+.cardPrice {
+  margin-top: 50px;
+  display: flex;
+}
+
+.cardPrice div {
+  height: 20px;
+  width: 170px;
+  margin-right: 40px;
+}
+.pulsateCardLeft {
+  background: linear-gradient(90deg, #d4d4d4, #c7c7c7, #cccccc, #dad9d9);
+  background-size: 400% 400%;
+  animation: Gradient 1s ease infinite;
+}
+
+.pulsateCardRight {
+  background: linear-gradient(90deg, #d4d4d4, #d8d8d8, #dfdfdf, #e6e6e6);
+  background-size: 400% 400%;
+  animation: Gradient 1s ease infinite;
+}
+
+.pulsateText {
+  border-radius: 15px;
+  background: linear-gradient(90deg, #adacac, #cecdcd, #acacac, #bebebe);
+  background-size: 400% 400%;
+  animation: Gradient 1s ease infinite;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
