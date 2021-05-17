@@ -1,0 +1,25 @@
+.mainbox {
+  height: 100vh;
+  text-align: center;
+  background-color: #ca3c29;
+}
+
+.err {
+  padding-top: 20vh;
+  margin: 0;
+  color: #ffffff;
+  font-size: 11rem;
+}
+
+.msg {
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
