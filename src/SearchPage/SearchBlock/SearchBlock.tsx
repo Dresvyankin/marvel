@@ -4,19 +4,19 @@ import Button from '@atlaskit/button';
 import styles from './SearchBlock.module.css';
 
 interface ISearchBlockProps {
-  onChangeInput: (event: ChangeEvent<HTMLInputElement>) => void;
-  onClickHandle: () => void;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onClick: () => void;
   searchValue: string;
 }
 
 export const SearchBlock: (props: ISearchBlockProps) => JSX.Element = ({
-  onChangeInput,
-  onClickHandle,
+  onChange,
+  onClick,
   searchValue,
 }: ISearchBlockProps) => {
   const onKeyPressEnter: (event: KeyboardEvent<HTMLInputElement>) => void = (event) => {
     if (event.key === 'Enter') {
-      onClickHandle();
+      onClick();
     }
   };
 
@@ -32,7 +32,7 @@ export const SearchBlock: (props: ISearchBlockProps) => JSX.Element = ({
         }}
         placeholder="Search character"
         aria-label="default text field"
-        onChange={onChangeInput}
+        onChange={onChange}
         value={searchValue}
         onKeyPress={onKeyPressEnter}
       />
@@ -45,7 +45,7 @@ export const SearchBlock: (props: ISearchBlockProps) => JSX.Element = ({
           marginLeft: '30px',
         }}
         appearance="primary"
-        onClick={onClickHandle}
+        onClick={onClick}
       >
         Search
       </Button>

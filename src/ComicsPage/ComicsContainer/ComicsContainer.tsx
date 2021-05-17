@@ -8,14 +8,14 @@ interface IComicsContainerProps {
   cards: IComicsData;
   cardsPerPage: number;
   currentPage: number;
-  onChangePage: (_: SyntheticEvent, pageNumber: number) => void;
+  onChange: (_: SyntheticEvent, pageNumber: number) => void;
 }
 
 export const ComicsContainer: FC<IComicsContainerProps> = ({
   cards,
   cardsPerPage,
   currentPage,
-  onChangePage,
+  onChange,
 }: IComicsContainerProps) => {
   if (!cards.results.length) {
     return <h1 className="title">No comics found</h1>;
@@ -30,7 +30,7 @@ export const ComicsContainer: FC<IComicsContainerProps> = ({
       </div>
       <Paginator
         currentPage={currentPage}
-        onChangePage={onChangePage}
+        onChange={onChange}
         totalPages={cards.total}
         cardsPerPage={cardsPerPage}
       />

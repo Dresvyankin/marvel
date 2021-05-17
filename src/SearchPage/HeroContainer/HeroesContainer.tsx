@@ -8,14 +8,14 @@ interface IHeroesContainerProps {
   cards: IHeroData;
   cardsPerPage: number;
   currentPage: number;
-  onChangePage: (_: SyntheticEvent, pageNumber: number) => void;
+  onChange: (_: SyntheticEvent, pageNumber: number) => void;
 }
 
 export const HeroesContainer: (props: IHeroesContainerProps) => JSX.Element = ({
   cards: { results, total },
   cardsPerPage,
   currentPage,
-  onChangePage,
+  onChange,
 }: IHeroesContainerProps) => {
   if (results.length === 0) {
     return <h1 className="title">No matches found</h1>;
@@ -28,7 +28,7 @@ export const HeroesContainer: (props: IHeroesContainerProps) => JSX.Element = ({
           <HeroCard key={hero.id} hero={hero} />
         ))}
       </div>
-      <Paginator currentPage={currentPage} onChangePage={onChangePage} totalPages={total} cardsPerPage={cardsPerPage} />
+      <Paginator currentPage={currentPage} onChange={onChange} totalPages={total} cardsPerPage={cardsPerPage} />
     </>
   );
 };

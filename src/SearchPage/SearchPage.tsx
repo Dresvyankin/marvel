@@ -96,14 +96,14 @@ export class SearchPage extends Component<RouteComponentProps, ISearchPageState>
         <div className={styles.container}>
           <SearchBlock
             searchValue={searchValue}
-            onChangeInput={this.handleOnChangeInput}
-            onClickHandle={this.handleOnClickSearch}
+            onChange={this.handleOnChangeInput}
+            onClick={this.handleOnClickSearch}
           />
           {data ? (
             <HeroesContainer
               currentPage={currentPage}
               cards={data}
-              onChangePage={this.handleOnChangePage}
+              onChange={this.handleOnChangePage}
               cardsPerPage={cardsPerPage}
             />
           ) : (

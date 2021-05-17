@@ -32,8 +32,7 @@ export class ComicsPage extends Component<RouteComponentProps<MatchParams>, ICom
     const { heroId } = this.props.match.params;
     const { currentPage } = this.state;
 
-    const { name } = await getHeroById(heroId);
-    const comics = await getComicsPerPage(heroId, currentPage);
+    const [{ name }, comics] = await Promise.all([getHeroById(heroId), getComicsPerPage(heroId, currentPage)]);
     this.setState({ data: comics, hero: name });
   }
 
@@ -55,7 +54,7 @@ export class ComicsPage extends Component<RouteComponentProps<MatchParams>, ICom
           <ComicsContainer
             currentPage={currentPage}
             cards={data}
-            onChangePage={this.handleOnChangePage}
+            onChange={this.handleOnChangePage}
             cardsPerPage={cardsPerPage}
           />
         ) : (

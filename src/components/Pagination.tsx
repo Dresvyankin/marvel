@@ -6,13 +6,13 @@ interface IPaginatorProps {
   cardsPerPage: number;
   totalPages: number;
   currentPage: number;
-  onChangePage: (_: SyntheticEvent, pageNumber: number) => void;
+  onChange: (_: SyntheticEvent, pageNumber: number) => void;
 }
 
 export const Paginator: (props: IPaginatorProps) => JSX.Element = ({
   totalPages,
   currentPage,
-  onChangePage,
+  onChange,
   cardsPerPage,
 }: IPaginatorProps) => {
   const pages = calculateNumberOfPages(totalPages, cardsPerPage);
@@ -26,7 +26,7 @@ export const Paginator: (props: IPaginatorProps) => JSX.Element = ({
       }}
       pages={pages}
       selectedIndex={currentPage - 1}
-      onChange={onChangePage}
+      onChange={onChange}
     />
   );
 };
